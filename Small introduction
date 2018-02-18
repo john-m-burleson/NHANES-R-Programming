@@ -1,0 +1,13 @@
+# NHANES-project
+Hello All!
+
+First I would like to say that this project is an attempt 
+
+Here is a small introduction into each file that we have in this repository:
+
+
+File name:"SQL R nhanes 1999-2014 walking imparment"
+
+This file downloads particular data files from 1999-2014 and merges them into a "master" 
+file that is the first start to any reaserch project.
+
