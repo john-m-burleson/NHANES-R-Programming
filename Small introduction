@@ -1,13 +1,31 @@
-# NHANES-project
-Hello All!
+Hello world!
 
-First I would like to say that this project is an attempt 
+I am going to provide a little bit of backround before we continue, I am a recent graduate from Cal State East bay where I got my
+M.S in Statsitics. While completing my degree I have conducted some reaserch using this particular data repository, NHANES, and I have 
+found that most of the suppourt on the NHANES website is mostly for SAS. While SAS is good, if you are like me then you might want to 
+conduct your reaserch using other platforms like R! 
+
+First I would like to say that this project is an attempt to help anybody that would like to conduct reaserch using the 
+National Health and Nutrition Examination Survey (NHANES) data repository using R. In this project we go from: downloading our data directly from 
+the NHANES website using a R package called "RNHANES", to cleaning our data, imputting missing values using a R package called "mi",
+proividing some descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
+
+
 
 Here is a small introduction into each file that we have in this repository:
 
 
 File name:"SQL R nhanes 1999-2014 walking imparment"
 
-This file downloads particular data files from 1999-2014 and merges them into a "master" 
-file that is the first start to any reaserch project.
+This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any reaserch project. 
+NHANES breaks down their data into years and within each year they further group certain datasets . This is useful once you 
+can navigate the site and once you get a through understading of their data dictorionary. We join our different datasets using basic
+SQL commands
+
+
+
+
+
+Something to note is that you are going to have a fair bit of missing data so you have one of two options: 
+you can remove all missing data or you can impute missing values into the dataset.
 
