@@ -58,7 +58,7 @@ final_data$prob=prob
 library(pROC)
 library(ggplot2)
 g<-roc(PFQ061B~prob,data = final_data);g
-ggroc(g,colour = "red")+ggtitle("ROC Curve")+ geom_abline(intercept = 1, slope = 1)
+plot.roc(PFQ061B~prob,data = final_data, legacy.axes=TRUE, col='red', grid=c(0.125, 0.125), mar=c(4,4,2,2), main='ROC Curve' )
 #percision and recall curve
 library(ROCR)
 pred <- prediction(final_data$prob, final_data$PFQ061B)
