@@ -27,12 +27,12 @@ str(final_data)
 #############################################################################
 #                      chi-square test of independence                      #
 #############################################################################
-#walking imparment vs. Gender
+#walking impairment vs. Gender
 chisq.test(final_data$PFQ061B,final_data$RIAGENDR)
 #############################################################################
 #            Chi-square equal proportins(comparing mutiple proportions)     #
 #############################################################################
-# walking imparment
+# walking impairment
 table(final_data$PFQ061B)
 chisq.test(c(56120,22210), p = c(1/2,1/2))
 #diabetes
@@ -65,7 +65,7 @@ chisq.test(c(73220,5110), p = c(1/2,1/2))
 #############################################################################
 #                    Correlation matrix plot using GGplot2                  #
 #############################################################################
-#turning walking imparment
+#turning walking impairment
 final_data$PFQ061B<-as.numeric(final_data$PFQ061B);class(final_data$PFQ061B)
 #diabetes
 final_data$DIQ010<-as.numeric(final_data$DIQ010);class(final_data$DIQ010)
@@ -75,19 +75,25 @@ final_data$DMDEDUC2<-as.numeric(final_data$DMDEDUC2);class(final_data$DMDEDUC2)
 final_data$RIAGENDR<-as.numeric(final_data$RIAGENDR);class(final_data$RIAGENDR)
 #asthma
 final_data$MCQ010<-as.numeric(final_data$MCQ010);class(final_data$MCQ010)
-#arthritis
-final_data$MCQ160A<-as.numeric(final_data$MCQ160A);class(final_data$MCQ160A)
 #age
-final_data$RIDAGEYR<-as.numeric(final_data$MCQ160A);class(final_data$MCQ160A)
+final_data$RIDAGEYR<-as.numeric(final_data$RIDAGEYR);class(final_data$RIDAGEYR)
 #cancer
 final_data$MCQ220<-as.numeric(final_data$MCQ220);class(final_data$MCQ220)
 #bmi
-final_data$BMXBMI<-as.numeric(final_data$BMXBMI);class(final_data$bmx)
-
+final_data$BMXBMI<-as.numeric(final_data$BMXBMI);class(final_data$final_data$BMXBMI)
 #making our data set a data frame
-final_data<-as.data.frame(final_data);class(final_data)
+final_data<-as.data.frame(final_data);str(final_data)
 #we are going to plot a correlation matrix since a scatter plot matrix will not 
-# look adequate in this data frame
+# look adequate in this data frame changing labels of variables
+names(final_data)[1]<-"Walking Impairment"
+names(final_data)[2]<-"Cancer"
+names(final_data)[3]<-"Asthma"
+names(final_data)[4]<-"Age"
+names(final_data)[5]<-"Education"
+names(final_data)[6]<-"Gender"
+names(final_data)[7]<-"BMI"
+names(final_data)[8]<-"Diabetes"
+str(final_data)
 library(corrplot)
 #matrix or correlation coefficents
 m<-cor(final_data)
@@ -100,21 +106,21 @@ corrplot(m, method = "shade",type="upper",title = "Correlation Matrix",mar = c(0
 #making box plots for each dependant countinous variable
 #Age
 library(ggplot2)
-qplot(x = factor(final_data$PFQ061B), y = final_data$RIDAGEYR,data=final_data, geom=c("boxplot"), 
-      fill=factor(final_data$PFQ061B), main="Boxplot of Age",xlab = "Walking imparment",ylab = "Age")
+qplot(x =final_data$`Walking Impairment`, y = final_data$Age,data=final_data, geom=c("boxplot"), 
+      fill=factor(`Walking Impairment`), main="Boxplot of Age",xlab = "Walking impairment",ylab = "Age")
 #BMI
-qplot(x = factor(final_data$PFQ061B), y = final_data$BMXBMI,data=final_data, geom=c("boxplot"), 
-      fill=factor(final_data$PFQ061B), main="Boxplot of BMI",xlab = "Walking imparment",ylab = "BMI")
+qplot(x = final_data$`Walking Impairment`, y = final_data$BMI,data=final_data, geom=c("boxplot"), 
+      fill=factor(`Walking Impairment`), main="Boxplot of BMI",xlab = "Walking impairment",ylab = "BMI")
 #pie charts 
 library(ggplot2)
 #walking imparment
 table(final_data$PFQ061B)
 df_walk <- data.frame(
-  group = c("No walking imparment", "walking imparment"),
+  group = c("No walking impairment", "Walking impairment"),
   value = c(56120, 22210)
 )
 # piechart
-ggplot(df_walk, aes(x="", y=value, fill=group))+geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ggtitle("Pie chart for Walking Imparment")
+ggplot(df_walk, aes(x="", y=value, fill=group))+geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ggtitle("Pie chart for Walking Impairment")
 #arthritis
 table(final_data$MCQ160A)
 df_arthritis <- data.frame(
