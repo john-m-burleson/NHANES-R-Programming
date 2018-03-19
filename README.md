@@ -18,7 +18,7 @@ NHANES breaks down their data into years and within each year they further break
 can navigate the site and once you get a through understanding of their data dictionary. We join our different datasets using basic SQL commands. We lastly output our datafile as a CSV file so we can impute missing values.
 
 File name: “Missing imputation mi package”
-Firs thing to note is that if you want to do not wish to impute missing values then we can just omit any rows that 
+First thing to note is that if you want to do not wish to impute missing values then we can just omit any rows that 
 have at least one missing value; the R command that is quite useful is “na.omit()”. If you wish to maximize your sample size 
 then we go ahead and impute missing values into our dataset. The most common way of imputing missing values
 would be to take the means of our distribution and replace all missing values with this value.  
