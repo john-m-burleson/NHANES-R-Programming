@@ -4,11 +4,11 @@ National Health and Nutrition Examination Survey (NHANES)  R programming code re
 Here is a Link to the NHANES website so you can first learn about this data repository:
 [NHANES Homepage]( https://www.cdc.gov/nchs/nhanes/)
 
-⋅⋅⋅This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES) * data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
+This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES) * data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
 
  **SQL R nhanes 1999-2014 walking impairment**
 
-⋅⋅⋅This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project.(After a proper literature review!) NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL commands. We lastly output our datafile as a CSV file so we can impute missing values.
+This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project.(After a proper literature review!) NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL commands. We lastly output our datafile as a CSV file so we can impute missing values.
 
  **Missing imputation mi package**
  
