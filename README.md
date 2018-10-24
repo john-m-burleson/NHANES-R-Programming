@@ -1,7 +1,7 @@
 National Health and Nutrition Examination Survey (NHANES)  R programming code repository
 ===
 
-![nhanes](https://user-images.githubusercontent.com/36578867/47463656-b0bed800-d79b-11e8-85bf-48bd98294f62.jpg)
+![nhanes](https://user-images.githubusercontent.com/36578867/47465145-7a378c00-d7a0-11e8-99a5-bf53ead6d80b.jpg)
 
 Here is a Link to the NHANES website so you can first learn about this data repository:
 [NHANES Homepage]( https://www.cdc.gov/nchs/nhanes/)
