@@ -25,7 +25,7 @@ Here are a couple of examples of some of the data vizualizations that this file 
 ![figure2_correlation_matrix](https://user-images.githubusercontent.com/36578867/47458832-6b94a900-d78f-11e8-9bd6-d0a99c29e5f3.jpg)
 
 
-**Logistic regression **
+**Logistic regression**
 
 In this file we conduct binary logistic regression to try and forecast the odds of a person experiencing walking impairment in their lifetime. Our logsitc regreesion model is a fuinction of other possible demographic charteristics that are associated with walking impairment, such as diabetes and gender. These varaibles are important because if you have one or more of these charteristics the odds of you having walkjing impairment increases. We come up with a statistically significant model as well as provide some model performance metrics Such as a ROC curve (as seen below).
 
