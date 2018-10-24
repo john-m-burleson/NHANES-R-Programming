@@ -14,9 +14,9 @@ This file downloads raw data files from 1999-2014 and merges them into a "master
  
 If you wish to maximize your sample size then we go ahead and impute missing values into our dataset. The most common way of imputing missing values that are on a countinous spectrum would be to take the means of our distribution  and replace all missing values with this value.  The problem in our case is that most of the variables in our dataset are categorical; So we instead decide to use a R package called *“MI”. Here is a brief explanation of what this R package does taken from the MI CRAN: “The mi package provides functions for data manipulation, imputing missing values in an approximate Bayesian framework”.*
 
-**Descriptive statistics/Inferential Statisitcs/ Graphics using ggplot2**
+**Descriptive statistics/Inferential Statistics/ Graphics using ggplot2**
 
-In this file we conduct statistical inference in the form of: Chi- square test of equal proportions, Chi-square test of independence and we create a correlation matrix of all variables in our dataset. We also wish to summarize our dataset in the form of descriptive statsitcs; we do this by visualizing our dataset in the form of  waffle plots (square pie charts) and box plots using ggplot2.
+In this file we conduct statistical inference in the form of: Chi- square test of equal proportions, Chi-square test of independence and we create a correlation matrix of all variables in our dataset. We also wish to summarize our dataset in the form of descriptive statistics; we do this by visualizing our dataset in the form of waffle plots (square pie charts) and box plots using ggplot2.
 
 Here are some of examples of data vizualizations that we will create using this code:
 ![figure1h_walking impairment](https://user-images.githubusercontent.com/36578867/47458750-3720ed00-d78f-11e8-8e19-1d3e3f72b32f.jpg)
@@ -26,15 +26,14 @@ Here are some of examples of data vizualizations that we will create using this 
 
 **Logistic regression**
 
-In this file we conduct binary logistic regression to try and forecast the odds of a person experiencing walking impairment in their lifetime. Our logsitc regreesion model is a fuinction of other possible dependant demographic varibles that represent our population of interest. These variables are associated with walking impairment, such as diabetes and gender. These varaibles are important because having one or more of these charteristics increases the odds of you having walkjing impairment in your lifetime. We come up with a statistically significant model as well as provide some model performance metrics Such as a ROC curve (as seen below) to gauge the predictablity of our model.
-
+In this file we conduct binary logistic regression to try and forecast the odds of a person experiencing walking impairment in their lifetime. Our logistic regression model is a function of other possible dependent demographic variables that represent our population of interest. These variables are associated with walking impairment, such as diabetes and gender. These variables are important because having one or more of these characteristics increases the odds of you having walking impairment in your lifetime. We come up with a statistically significant model as well as provide some model performance metrics Such as a ROC curve (as seen below) to gauge the predictability of our model.
 
 ![figure3_roc_curve](https://user-images.githubusercontent.com/36578867/47459487-10fc4c80-d791-11e8-8edc-414675fb0af2.jpg)
 
 
-**Machene learning models**
+**Machine learning models**
 
-In  these files we try and put together some machiene leanring models that try and perdict walking impairment in an individual. More will be added at a latter date seeing which models preform the best (including out logsitc regression model).
+In these files we try and put together some machine learning models that try and predict walking impairment in an individual. More will be added at a later date seeing which models preform the best (including out logistic regression model).
 
 
 
