@@ -1,17 +1,11 @@
-# NHANES-project
-Hello world!
+National Health and Nutrition Examination Survey (NHANES)  R programming code repository
+===
+Here is a Link to the NHANES website so you can first learn about this data repository:
+[NHANES Homepage]( https://www.cdc.gov/nchs/nhanes/)
 
-First I would like to say that this project is an attempt to help anybody that would like to conduct research using the 
-National Health and Nutrition Examination Survey (NHANES) data repository using R. In this project we go from: downloading our data directly from 
-the NHANES website using a R package called "RNHANES", to cleaning our data, imputing missing values using a R package called "mi",
-providing some descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
+This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES) * data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
 
-
-
-Here is a small introduction into each file that we have in this repository:
-
-
-File name: "SQL R nhanes 1999-2014 walking impairment"
+File name: *SQL R nhanes 1999-2014 walking impairment*
 
 This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project. 
 NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you 
