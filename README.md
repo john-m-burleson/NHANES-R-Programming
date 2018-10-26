@@ -5,6 +5,9 @@ National Health and Nutrition Examination Survey (NHANES) R-programming
 
 Here is a Link to the NHANES website so you can first learn about this data repository:
 [NHANES Homepage]( https://www.cdc.gov/nchs/nhanes/)
+*A understanding of their metadata repository is highly encourged*
+
+**Who can benifit from this code repository?**
 
 This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES) * data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
 
@@ -21,10 +24,14 @@ If you wish to maximize your sample size then we go ahead and impute missing val
 In this file we conduct statistical inference in the form of: Chi- square test of equal proportions, Chi-square test of independence and we create a correlation matrix of all variables in our dataset. We also wish to summarize our dataset in the form of descriptive statistics; we do this by visualizing our dataset in the form of waffle plots (square pie charts) and box plots using ggplot2.
 
 Here are some of examples of data vizualizations that we will create using this code:
+
 ![figure1h_walking impairment](https://user-images.githubusercontent.com/36578867/47458750-3720ed00-d78f-11e8-8e19-1d3e3f72b32f.jpg)
+
+*waffle plot*
 
 ![figure2_correlation_matrix](https://user-images.githubusercontent.com/36578867/47458832-6b94a900-d78f-11e8-9bd6-d0a99c29e5f3.jpg)
 
+![figure1a_age](https://user-images.githubusercontent.com/36578867/47587368-81cd7100-d917-11e8-9908-e80ded1ef3bc.jpg)
 
 **Logistic regression**
 
