@@ -1,7 +1,3 @@
-#################################################################################  Note: we are going to make our walking imaprment binary math is much eaiser #
-################################################################################
-
-
 #lets make sure there are no strangling datasets in our global enviroment
 rm(list=ls(all=TRUE))
 
