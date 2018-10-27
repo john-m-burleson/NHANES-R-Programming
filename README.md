@@ -10,7 +10,7 @@ Here is a Link to the NHANES website so you can first learn about this data repo
 
 **Who can benifit from this code repository?**
 
-This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES) * data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
+This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES)* data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
 
  **SQL R nhanes 1999-2014 walking impairment**
 
