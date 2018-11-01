@@ -44,13 +44,3 @@ In this file we conduct binary logistic regression to try and forecast the odds 
 **Machine learning models**
 
 In these files we try and put together some machine learning models that try and predict walking impairment in an individual. More will be added at a later date seeing which models preform the best (including out logistic regression model).
-
-**Acknowledgement of contribution:**
-
-Joshua Kerr, Ph.D.
-Chair, Department of Statistics & Biostatistics 
-Office: ScN 229
-California State University, East Bay
-25800 Carlos Bee Boulevard
-Hayward, CA 94542-3004
-Phone: (510) 885-3626
