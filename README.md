@@ -44,7 +44,7 @@ In this file we conduct binary logistic regression to try and forecast the odds 
 **Machine learning models/ General Linear Model**
 
 In these files we try and put together some machine learning models and one GLM and try and predict walking impairment in an individual. 
-These ML models include:
+These models include:
 
 *1) Decision Trees*
 
