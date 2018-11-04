@@ -41,6 +41,22 @@ In this file we conduct binary logistic regression to try and forecast the odds 
 ![figure3_roc_curve](https://user-images.githubusercontent.com/36578867/47459487-10fc4c80-d791-11e8-8edc-414675fb0af2.jpg)
 
 
-**Machine learning models**
+**Machine learning models/ General Linear Model**
 
-In these files we try and put together some machine learning models that try and predict walking impairment in an individual. More will be added at a later date seeing which models preform the best (including out logistic regression model).
+In these files we try and put together some machine learning models and one GLM and try and predict walking impairment in an individual. 
+These ML models include:
+
+*1) Decision Trees*
+
+*2) Neural Networks*
+
+*3) Random Forrest (partykit R:package)*
+
+*4) Random Forrst*
+
+*5) General Linear model: Ordinal Logistic Regression*
+
+
+
+
+
