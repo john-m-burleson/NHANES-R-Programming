@@ -20,6 +20,12 @@ This file downloads raw data files from 1999-2014 and merges them into a "master
  
 If you wish to maximize your sample size then we go ahead and impute missing values into our dataset. The most common way of imputing missing values that are on a countinous spectrum would be to take the means of our distribution  and replace all missing values with this value.  The problem in our case is that most of the variables in our dataset are categorical; So we instead decide to use a R package called *“MI”. Here is a brief explanation of what this R package does taken from the MI CRAN: “The mi package provides functions for data manipulation, imputing missing values in an approximate Bayesian framework”.*
 
+*Potential issues with MI package*
+
+When imputing missing values for continuous variables one thing that our imputation model did not model as well as we would like is imputing values that are outside of our range of values that we wish to conduct analysis on. This leads to binning these continuous variables at a fixed value and causes the tails of our distribution to be fat at both ends. These fat tails causes a change to our distribution which is less than an optimal result. That being said modeling of our categorical variables turned out to be as expected.
+This problem of modeling continuous variables did not have a big impact on our analysis since only 2 of our variables in our model where continuous out of 11 variables.
+ 
+
 **Descriptive statistics/Inferential Statistics/ Graphics using ggplot2**
 
 In this file we conduct statistical inference in the form of: Chi- square test of equal proportions, Chi-square test of independence and we create a correlation matrix of all variables in our dataset. We also wish to summarize our dataset in the form of descriptive statistics; we do this by visualizing our dataset in the form of waffle plots (square pie charts) and box plots using ggplot2.
