@@ -84,8 +84,11 @@ final_data$BMXBMI<-as.numeric(final_data$BMXBMI);class(final_data$final_data$BMX
 #making our data set a data frame
 final_data<-as.data.frame(final_data);str(final_data)
 #we are going to plot a correlation matrix since a scatter plot matrix will not 
-# look adequate in this data frame changing labels of variables
+# Changing labels of the walking impairment variable becasue it makese the boxplots look better
 names(final_data)[1]<-"Walking Impairment"
+final_data$`Walking Impairment`[which(final_data$`Walking Impairment`==0)]<- "No walking imparment"
+final_data$`Walking Impairment`[which(final_data$`Walking Impairment`==1)]<- "Walking imparment"
+table(final_data$`Walking Impairment`)
 names(final_data)[2]<-"Cancer"
 names(final_data)[3]<-"Asthma"
 names(final_data)[4]<-"Age"
@@ -98,7 +101,8 @@ library(corrplot)
 #matrix or correlation coefficents
 m<-cor(final_data)
 #actual plot
-corrplot(m, method = "shade",type="upper",title = "Correlation Matrix",mar = c(0,0,1,0),col.main="red")
+corrplot(m, method = "shade",col.main="red",type = "upper",tl.cex = .9,order = "AOE")
+
 
 #############################################################################
 #                               Descriptive Statistics                      #
@@ -107,12 +111,13 @@ corrplot(m, method = "shade",type="upper",title = "Correlation Matrix",mar = c(0
 #Age
 library(ggplot2)
 qplot(x =final_data$`Walking Impairment`, y = final_data$Age,data=final_data, geom=c("boxplot"), 
-      fill=factor(`Walking Impairment`), main="Boxplot of Age",xlab = "Walking impairment",ylab = "Age")
+      fill=`Walking Impairment`, main="Boxplot of Age",xlab = "Walking impairment",ylab = "Age")
+
 #BMI
 qplot(x = final_data$`Walking Impairment`, y = final_data$BMI,data=final_data, geom=c("boxplot"), 
-      fill=factor(`Walking Impairment`), main="Boxplot of BMI",xlab = "Walking impairment",ylab = "BMI")
+      fill=`Walking Impairment`, main="Boxplot of BMI",xlab = "Walking impairment",ylab = "BMI")
+
 #pie charts 
-library(ggplot2)
 #walking imparment
 table(final_data$PFQ061B)
 df_walk <- data.frame(
@@ -120,7 +125,8 @@ df_walk <- data.frame(
   value = c(56120, 22210)
 )
 # piechart
-ggplot(df_walk, aes(x="", y=value, fill=group))+geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ggtitle("Pie chart for Walking Impairment")
+ggplot(df_walk, aes(x="", y=value, fill=group))+geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ggtitle("Pie chart for Walking Impairment")+
+  geom_text(label = percent(df_walk))
 #arthritis
 table(final_data$MCQ160A)
 df_arthritis <- data.frame(
@@ -181,10 +187,50 @@ df_blood_pressure <- data.frame(
 ggplot(df_blood_pressure, aes(x="", y=value, fill=group))+geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ggtitle("Pie chart for hihg blood pressure")
 
 
-
-
-
-
-
-
-
+#waffle charts
+#walking imparment
+library(scales)
+library(waffle)
+table(final_data$`Walking Impairment`)
+vals <- c(72, 28)
+val_names <- sprintf("%s (%s)", c("No Walking impairment", "Walking impairment"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Walking Impairment")
+#Asthma
+library(scales)
+library(waffle)
+table(final_data$Asthma)
+vals <- c(12, 88)
+val_names <- sprintf("%s (%s)", c("No Asthma", "Has Asthma"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Asthma")
+#cancer
+library(scales)
+library(waffle)
+table(final_data$Cancer)
+vals <- c(10, 90)
+val_names <- sprintf("%s (%s)", c("No Cancer", "Has Cancer"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Cancer")
+#diabetes
+library(scales)
+library(waffle)
+table(final_data$Diabetes)
+vals <- c(7, 93)
+val_names <- sprintf("%s (%s)", c("No Diabetes", "Has Diabetes"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Diabetes")
+#education
+library(scales)
+library(waffle)
+table(final_data$Education)
+vals <- c(14, 17,23,27,19)
+val_names <- sprintf("%s (%s)", c("No high school", "Some high school","Graduated high school","Some college","College graduate"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Education")
+#gender
+table(final_data$Gender)
+vals <- c(49,51)
+val_names <- sprintf("%s (%s)", c("Male","Female"), percent(round(vals/sum(vals), 2)))
+names(vals) <- val_names
+waffle(vals,size = 1,title = "Distribution of Gender")
