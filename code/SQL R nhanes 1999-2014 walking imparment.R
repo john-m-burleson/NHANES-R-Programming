@@ -240,8 +240,3 @@ table(duplicated(final_data$SEQN))
 # duplicated values
 write.csv(final_data, "final_data_missing.csv", row.names=T)
 
-#############################################################################
-#                              Code appendix                                #
-#############################################################################
-#inner join using SQL(This code is expensive in terms of computation ,so by writting a basic function we accomplish the same thing as a "inner merge")
-combined<-sqldf('SELECT * FROM physical_99_sql a , body_meassure_99_sql b , diabetes_99_sql c ,demographics_99_sql d , medical_conditions_99_sql e , blood_pressure_99_sql f , cardiovascular_99_sql g  WHERE a.SEQN=b.SEQN=c.SEQN=d.SEQN=e.SEQN=f.SEQN=g.SEQN')
