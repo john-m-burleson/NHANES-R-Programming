@@ -14,7 +14,7 @@ This is to help anybody that would like to conduct research using the  *National
 
  **SQL R nhanes 1999-2014 walking impairment**
 
-This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project(After a proper literature review!); NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL command sand output our datafile as a CSV file so we can impute missing values.One thing to note is that if you want do not wish to impute missing values then we can just omit any rows that have at least one missing value by using the R command “na.omit()”.
+This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project(After a proper literature review!); NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL commands and output our datafile as a CSV file so we can impute missing values.One thing to note is that if you want do not wish to impute missing values then we can just omit any rows that have at least one missing value by using the R command “na.omit()”.
 
  **Missing imputation mi package**
  
