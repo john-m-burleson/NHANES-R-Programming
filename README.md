@@ -12,19 +12,11 @@ Here is a Link to the NHANES website so you can first learn about this data repo
 
 This is to help anybody that would like to conduct research using the  *National Health and Nutrition Examination Survey (NHANES)* data repository using R. In this project we go from: downloading our data directly from the NHANES data repository, using a R package called *RNHANES* , to cleaning our data, imputing missing values using a R package called  *mi*, providing descriptive statistics with graphics, and using logistic regression to try and forecast our results. 
 
- **SQL R nhanes 1999-2014 walking impairment**
+ **SQL R nhanes 1999-2018 walking impairment**
 
-This file downloads raw data files from 1999-2014 and merges them into a "master" file that is the first start to any research project(After a proper literature review!); NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL commands and output our datafile as a CSV file so we can impute missing values.One thing to note is that if you want do not wish to impute missing values then we can just omit any rows that have at least one missing value by using the R command “na.omit()”.
+This file downloads raw data files from 1999-2018 and merges them into a "master" file that is the first start to any research project(After a proper literature review!); NHANES breaks down their data into years and within each year they further break down their datasets into questions that are similar to one another. This is useful once you can navigate the site and once you get a thorough understanding of their metadata repository. We join our different datasets using basic SQL commands and output our datafile as a CSV file so we can impute missing values.One thing to note is that if you want do not wish to impute missing values then we can just omit any rows that have at least one missing value by using the R command “na.omit()”.
 
- **Missing imputation mi package**
- 
-If you wish to maximize your sample size then we go ahead and impute missing values into our dataset. The most common way of imputing missing values that are on a countinous spectrum would be to take the means of our distribution  and replace all missing values with this value.  The problem in our case is that most of the variables in our dataset are categorical; So we instead decide to use a R package called *“MI”. Here is a brief explanation of what this R package does taken from the MI CRAN: “The mi package provides functions for data manipulation, imputing missing values in an approximate Bayesian framework”.*
 
-*Potential issues with MI package*
-
-When imputing missing values for continuous variables one thing that our imputation model did not model as well as we would like is imputing values that are outside of our range of values that we wish to conduct analysis on. This leads to binning these continuous variables at a fixed value and causes the tails of our distribution to be fat at both ends. These fat tails causes a change to our distribution which is less than an optimal result. That being said modeling of our categorical variables turned out to be as expected.
-This problem of modeling continuous variables did not have a big impact on our analysis since only 2 of our variables in our model where continuous out of 11 variables.
- 
 
 **Descriptive statistics/Inferential Statistics/ Graphics using ggplot2**
 
